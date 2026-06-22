@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,20 +22,17 @@
 --sky:#B4D6E3;
 
 --bg:#DCE8EE;
+--surface:#EEF6F9;
 
---card:#ECF3F6;
-
---text:#17314E;
+--text:#19314B;
 
 }
 
 .dark{
 
---bg:#13212F;
-
---card:#1A3046;
-
---text:#EAF5FF;
+--bg:#142230;
+--surface:#1D3247;
+--text:#EDF7FF;
 
 }
 
@@ -45,25 +42,29 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 
-font-family:"Plus Jakarta Sans";
+font-family:"Balsamiq Sans";
 
 background:var(--bg);
 
 color:var(--text);
 
-transition:.25s;
+transition:.3s;
 
 }
 
 .container{
 
-max-width:1300px;
+max-width:1380px;
 
 margin:auto;
 
-padding:36px;
+padding:34px;
 
 }
 
@@ -79,23 +80,27 @@ color:inherit;
 
 position:fixed;
 
-left:26px;
+left:22px;
 
-top:26px;
+top:22px;
 
-width:56px;
+width:58px;
 
-height:56px;
+height:58px;
 
-border-radius:50%;
+border-radius:999px;
 
-background:var(--card);
+background:var(--surface);
 
 display:grid;
 
 place-items:center;
 
 cursor:pointer;
+
+font-size:22px;
+
+z-index:1000;
 
 }
 
@@ -115,15 +120,17 @@ padding-bottom:90px;
 
 display:flex;
 
-gap:16px;
-
 align-items:center;
+
+gap:16px;
 
 }
 
 .brand img{
 
-width:62px;
+width:64px;
+
+height:64px;
 
 border-radius:50%;
 
@@ -133,7 +140,7 @@ border-radius:50%;
 
 font-family:"Playfair Display";
 
-font-size:30px;
+font-size:32px;
 
 }
 
@@ -151,11 +158,11 @@ align-items:center;
 
 background:var(--classic);
 
-padding:14px 22px;
+color:white;
+
+padding:16px 26px;
 
 border-radius:999px;
-
-color:white;
 
 }
 
@@ -163,13 +170,13 @@ color:white;
 
 display:grid;
 
-grid-template-columns:1.1fr .9fr;
+grid-template-columns:1.15fr .85fr;
 
 gap:60px;
 
 align-items:center;
 
-padding-bottom:140px;
+padding-bottom:120px;
 
 }
 
@@ -177,55 +184,37 @@ padding-bottom:140px;
 
 font-family:"Playfair Display";
 
-font-size:84px;
+font-size:88px;
 
-line-height:1;
+line-height:.96;
 
-margin-bottom:22px;
+margin-bottom:26px;
 
 }
 
 .hero p{
 
-font-size:20px;
+font-size:21px;
 
-line-height:1.9;
+line-height:2;
 
-max-width:650px;
-
-}
-
-.hero-card{
-
-background:var(--card);
-
-padding:28px;
-
-border-radius:40px;
-
-}
-
-.hero-card img{
-
-width:100%;
-
-border-radius:28px;
+max-width:620px;
 
 }
 
 .buttons{
 
-margin-top:36px;
-
 display:flex;
 
 gap:18px;
 
+margin-top:34px;
+
 }
 
-.button{
+.btn{
 
-padding:16px 24px;
+padding:18px 26px;
 
 border-radius:999px;
 
@@ -241,13 +230,39 @@ color:white;
 
 .secondary{
 
+background:transparent;
+
 border:1px solid var(--dusty);
+
+}
+
+.hero-card{
+
+background:var(--surface);
+
+padding:30px;
+
+border-radius:50px;
+
+box-shadow:
+
+0 30px 80px rgba(13,59,102,.08);
+
+}
+
+.hero-card img{
+
+width:100%;
+
+border-radius:36px;
 
 }
 
 .section{
 
-padding:110px 0;
+padding:130px 0;
+
+position:relative;
 
 }
 
@@ -255,21 +270,21 @@ padding:110px 0;
 
 font-family:"Playfair Display";
 
-font-size:62px;
+font-size:64px;
 
-margin-bottom:24px;
+margin-bottom:20px;
 
 }
 
 .subtitle{
 
+max-width:900px;
+
 font-size:20px;
 
 line-height:2;
 
-max-width:950px;
-
-margin-bottom:50px;
+margin-bottom:48px;
 
 }
 
@@ -279,17 +294,25 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:26px;
+gap:28px;
 
 }
 
 .card{
 
-background:var(--card);
+background:
 
-padding:40px;
+linear-gradient(
+180deg,
+rgba(255,255,255,.35),
+rgba(255,255,255,.08)
+);
 
-border-radius:36px;
+backdrop-filter:blur(18px);
+
+padding:44px;
+
+border-radius:42px;
 
 }
 
@@ -297,15 +320,39 @@ border-radius:36px;
 
 font-family:"Playfair Display";
 
-margin-bottom:18px;
+font-size:34px;
 
-font-size:32px;
+margin-bottom:20px;
 
 }
 
 .card p{
 
-line-height:1.9;
+line-height:2;
+
+}
+
+.quote{
+
+padding:70px;
+
+border-radius:60px;
+
+background:var(--classic);
+
+color:white;
+
+text-align:center;
+
+}
+
+.quote h2{
+
+font-family:"Playfair Display";
+
+font-size:56px;
+
+margin-bottom:22px;
 
 }
 
@@ -315,17 +362,17 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:22px;
+gap:26px;
 
 }
 
 .stat{
 
-background:var(--card);
+background:var(--surface);
 
-padding:42px;
+padding:48px;
 
-border-radius:36px;
+border-radius:40px;
 
 }
 
@@ -333,19 +380,25 @@ border-radius:36px;
 
 font-family:"Playfair Display";
 
-font-size:58px;
-
-margin-bottom:10px;
+font-size:64px;
 
 }
 
 footer{
 
-padding:80px;
+padding:100px;
 
 text-align:center;
 
-opacity:.7;
+}
+
+footer h2{
+
+font-family:"Playfair Display";
+
+font-size:54px;
+
+margin-bottom:20px;
 
 }
 
@@ -367,7 +420,7 @@ display:none;
 
 .hero h1{
 
-font-size:58px;
+font-size:56px;
 
 }
 
@@ -431,7 +484,7 @@ Apply
 
 <div>
 
-<div style="letter-spacing:2px;color:#5B7C93">
+<div style="letter-spacing:2px;color:#65879F">
 
 STUDENT LED EDUCATIONAL MEDIA
 
@@ -445,19 +498,19 @@ Student ideas made accessible.
 
 <p>
 
-Student Brief 360 publishes concise educational briefs written by students and designed to help students understand complex topics clearly.
+A student-led publication transforming complex topics into concise educational briefs designed for students.
 
 </p>
 
 <div class="buttons">
 
-<a class="button primary" href="briefs.html">
+<a class="btn primary">
 
 Explore Briefs
 
 </a>
 
-<a class="button secondary" href="about.html">
+<a class="btn secondary">
 
 Learn More
 
@@ -472,6 +525,24 @@ Learn More
 <img src="intro-post.jpeg">
 
 </div>
+
+</section>
+
+
+
+<section class="quote">
+
+<h2>
+
+Read in minutes. Think for longer.
+
+</h2>
+
+<p>
+
+Clear ideas should not require endless scrolling.
+
+</p>
 
 </section>
 
@@ -503,9 +574,9 @@ Information Overload
 
 <p>
 
-Modern students navigate news alerts, social platforms, academic content, and competing perspectives every day.
+Students constantly move between news, social media, academic work, and opinion content.
 
-Finding clear, trustworthy information takes time and often feels inaccessible.
+Finding trustworthy information becomes exhausting.
 
 </p>
 
@@ -521,7 +592,7 @@ Why It Matters
 
 <p>
 
-Without digestible resources, students may disengage from important topics or form opinions using incomplete information.
+Without digestible resources, students may disengage entirely or build understanding from incomplete information.
 
 </p>
 
@@ -537,9 +608,7 @@ Our Solution
 
 <p>
 
-Student Brief 360 publishes short educational briefs that explain complex topics clearly and efficiently.
-
-Designed to be read in minutes and understood immediately.
+Student Brief 360 creates concise educational briefs built for clarity and designed to fit student lives.
 
 </p>
 
@@ -555,13 +624,7 @@ Designed to be read in minutes and understood immediately.
 
 <div class="title">
 
-Our Team
-
-</div>
-
-<div class="subtitle">
-
-Built by students and shaped by collaborative leadership.
+Built by Students
 
 </div>
 
@@ -623,13 +686,13 @@ Our Vision
 
 <h3>
 
-Accessible to All
+Accessible
 
 </h3>
 
 <p>
 
-Clear educational content available to every student.
+Free educational content available to every student.
 
 </p>
 
@@ -645,7 +708,7 @@ Student Created
 
 <p>
 
-Every brief is researched and created by students.
+Written and published by student contributors.
 
 </p>
 
@@ -661,7 +724,7 @@ Impact Driven
 
 <p>
 
-Content designed to encourage critical thinking and engagement.
+Encouraging thoughtful engagement.
 
 </p>
 
@@ -675,7 +738,17 @@ Content designed to encourage critical thinking and engagement.
 
 <footer>
 
-Student Voices. Real World Impact.
+<h2>
+
+The Student Brief 360
+
+</h2>
+
+<p>
+
+Student Voices • Real World Impact
+
+</p>
 
 </footer>
 
@@ -683,13 +756,13 @@ Student Voices. Real World Impact.
 
 <script>
 
-const t=document.getElementById("theme")
+const theme=document.getElementById("theme")
 
-t.onclick=()=>{
+theme.onclick=()=>{
 
 document.body.classList.toggle("dark")
 
-t.innerHTML=
+theme.innerHTML=
 
 document.body.classList.contains("dark")
 
