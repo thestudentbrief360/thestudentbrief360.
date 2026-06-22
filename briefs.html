@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,9 +18,11 @@
 --classic:#0D3B66;
 --dusty:#7F9DB1;
 --sky:#B4D6E3;
+
 --bg:#DCE8EE;
---surface:#EEF6F9;
---text:#19314B;
+--surface:#EDF5F8;
+
+--text:#17334D;
 }
 
 *{
@@ -32,9 +33,9 @@ box-sizing:border-box;
 
 body{
 
-font-family:"Balsamiq Sans";
-
 background:var(--bg);
+
+font-family:"Balsamiq Sans";
 
 color:var(--text);
 
@@ -42,11 +43,19 @@ color:var(--text);
 
 .container{
 
-max-width:1350px;
+max-width:1200px;
 
 margin:auto;
 
-padding:40px;
+padding:36px;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
 
 }
 
@@ -56,7 +65,15 @@ display:flex;
 
 justify-content:space-between;
 
-padding-bottom:80px;
+padding-bottom:90px;
+
+}
+
+.logo{
+
+font-family:"Playfair Display";
+
+font-size:32px;
 
 }
 
@@ -64,15 +81,9 @@ padding-bottom:80px;
 
 display:flex;
 
-gap:32px;
+gap:34px;
 
-}
-
-a{
-
-text-decoration:none;
-
-color:inherit;
+align-items:center;
 
 }
 
@@ -98,67 +109,25 @@ padding-bottom:100px;
 
 font-family:"Playfair Display";
 
-font-size:84px;
+font-size:82px;
 
-margin-bottom:18px;
+line-height:1;
+
+margin-bottom:22px;
 
 }
 
 .hero p{
 
-font-size:22px;
+font-size:20px;
 
-max-width:700px;
+max-width:720px;
 
 line-height:2;
 
 }
 
-.feature{
-
-background:var(--surface);
-
-padding:50px;
-
-border-radius:52px;
-
-margin-bottom:90px;
-
-}
-
-.feature small{
-
-letter-spacing:2px;
-
-}
-
-.feature h2{
-
-font-family:"Playfair Display";
-
-font-size:56px;
-
-margin:20px 0;
-
-}
-
-.read{
-
-display:inline-block;
-
-margin-top:30px;
-
-padding:16px 24px;
-
-border-radius:999px;
-
-background:var(--classic);
-
-color:white;
-
-}
-
-.filters{
+.categories{
 
 display:flex;
 
@@ -170,13 +139,77 @@ margin-bottom:60px;
 
 }
 
-.filter{
+.categories div{
 
-padding:14px 20px;
+padding:12px 18px;
+
+background:rgba(255,255,255,.45);
+
+border-radius:999px;
+
+}
+
+.featured{
 
 background:var(--surface);
 
+padding:50px;
+
+border-radius:50px;
+
+margin-bottom:90px;
+
+}
+
+.featured small{
+
+color:var(--dusty);
+
+letter-spacing:2px;
+
+}
+
+.featured h2{
+
+font-family:"Playfair Display";
+
+font-size:52px;
+
+margin:18px 0;
+
+}
+
+.preview{
+
+line-height:2;
+
+max-width:780px;
+
+}
+
+.read{
+
+margin-top:30px;
+
+display:inline-block;
+
+background:var(--classic);
+
+color:white;
+
+padding:16px 26px;
+
 border-radius:999px;
+
+}
+
+.section-title{
+
+font-family:"Playfair Display";
+
+font-size:56px;
+
+margin-bottom:40px;
 
 }
 
@@ -184,15 +217,19 @@ border-radius:999px;
 
 display:grid;
 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr 1fr;
 
-gap:30px;
+gap:28px;
 
 }
 
 .article{
 
-background:rgba(255,255,255,.3);
+background:
+
+rgba(255,255,255,.32);
+
+backdrop-filter:blur(12px);
 
 padding:40px;
 
@@ -200,19 +237,37 @@ border-radius:40px;
 
 }
 
+.tag{
+
+display:inline-block;
+
+margin-bottom:18px;
+
+color:var(--dusty);
+
+}
+
 .article h3{
 
 font-family:"Playfair Display";
 
-font-size:40px;
+font-size:38px;
 
-margin-bottom:14px;
+margin-bottom:16px;
 
 }
 
 .article p{
 
 line-height:2;
+
+margin-bottom:24px;
+
+}
+
+.article a{
+
+font-weight:700;
 
 }
 
@@ -222,7 +277,11 @@ margin-top:120px;
 
 padding:80px;
 
-background:var(--classic);
+background:linear-gradient(
+135deg,
+var(--classic),
+#35658F
+);
 
 color:white;
 
@@ -236,15 +295,43 @@ text-align:center;
 
 font-family:"Playfair Display";
 
-font-size:60px;
+font-size:58px;
 
 margin-bottom:18px;
 
 }
 
+.submit p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:2;
+
+margin-bottom:30px;
+
+}
+
+.submit a{
+
+display:inline-block;
+
+padding:18px 28px;
+
+background:white;
+
+color:var(--classic);
+
+border-radius:999px;
+
+font-weight:700;
+
+}
+
 footer{
 
-padding:80px;
+padding:90px;
 
 text-align:center;
 
@@ -264,6 +351,12 @@ font-size:54px;
 
 }
 
+.links{
+
+display:none;
+
+}
+
 }
 
 </style>
@@ -276,9 +369,9 @@ font-size:54px;
 
 <nav>
 
-<div>
+<div class="logo">
 
-Student Brief 360
+The Student Brief 360
 
 </div>
 
@@ -304,13 +397,20 @@ Brief Archive
 
 <p>
 
-Explore concise educational briefs written by students across policy, education, careers, technology, and current events.
+Explore concise educational briefs written by students and designed to make complex topics easier to understand.
 
 </p>
 
 </section>
 
-<section class="feature">
+<div class="categories">
+
+<div>Education</div>
+<div>Humanities</div>
+
+</div>
+
+<section class="featured">
 
 <small>
 
@@ -320,55 +420,27 @@ FEATURED BRIEF
 
 <h2>
 
-Should Internships Be Paid?
+Education Brief
 
 </h2>
 
-<p>
+<div class="preview">
 
-An exploration of accessibility, compensation, and opportunity.
+A concise student perspective examining an important educational issue and its broader impact on student life.
 
-</p>
+</div>
 
-<a class="read" href="#">
+<a class="read" href="articles/education-001.html">
 
-Read Brief
+Read Article
 
 </a>
 
 </section>
 
-<div class="filters">
+<div class="section-title">
 
-<div class="filter">
-
-Education
-
-</div>
-
-<div class="filter">
-
-Technology
-
-</div>
-
-<div class="filter">
-
-Policy
-
-</div>
-
-<div class="filter">
-
-Current Events
-
-</div>
-
-<div class="filter">
-
-Careers
-
-</div>
+Latest Articles
 
 </div>
 
@@ -376,33 +448,57 @@ Careers
 
 <div class="article">
 
+<div class="tag">
+
+Education
+
+</div>
+
 <h3>
 
-Should Internships Be Paid?
+Education Brief
 
 </h3>
 
 <p>
 
-Careers • Opportunity
+Short, accessible analysis designed to make educational issues easier to understand.
 
 </p>
+
+<a href="articles/education-001.html">
+
+Read →
+
+</a>
 
 </div>
 
 <div class="article">
 
+<div class="tag">
+
+Humanities
+
+</div>
+
 <h3>
 
-Abortion Brief
+Humanities Brief
 
 </h3>
 
 <p>
 
-Policy • Society
+Student writing exploring broader social and human-centered questions.
 
 </p>
+
+<a href="articles/humanities-001.html">
+
+Read →
+
+</a>
 
 </div>
 
@@ -418,9 +514,15 @@ Submit A Brief
 
 <p>
 
-Turn your ideas into concise educational content.
+Have an idea, perspective, or topic you want to explore? Submit your brief and contribute to Student Brief 360.
 
 </p>
+
+<a href="https://forms.gle/VzqCk7xn6ahxU7N38" target="_blank">
+
+Open Submission Form
+
+</a>
 
 </section>
 
@@ -435,5 +537,3 @@ Student Voices • Real World Impact
 </body>
 
 </html>
-```
-
