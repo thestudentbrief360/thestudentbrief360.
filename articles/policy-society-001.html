@@ -21,6 +21,7 @@
 
 --bg:#DCE8EE;
 --surface:#EDF5F8;
+--paper:#F7FBFD;
 
 --text:#17334D;
 }
@@ -43,38 +44,47 @@ color:inherit;
 }
 
 .container{
-max-width:900px;
+max-width:980px;
 margin:auto;
-padding:50px 36px 120px;
+padding:50px 32px 120px;
 }
 
 .back{
 
-display:inline-flex;
+display:inline-block;
 
-gap:10px;
-
-align-items:center;
+margin-bottom:70px;
 
 padding:12px 18px;
 
-background:rgba(255,255,255,.45);
-
 border-radius:999px;
 
-margin-bottom:60px;
+background:rgba(255,255,255,.45);
+
+}
+
+.article{
+
+background:var(--paper);
+
+padding:90px;
+
+border-radius:50px;
+
+box-shadow:
+0 20px 60px rgba(13,59,102,.08);
 
 }
 
 .category{
 
-color:var(--dusty);
-
 letter-spacing:2px;
 
 font-size:13px;
 
-margin-bottom:18px;
+color:var(--dusty);
+
+margin-bottom:20px;
 
 }
 
@@ -84,41 +94,19 @@ font-family:"Playfair Display";
 
 font-size:72px;
 
-line-height:1.02;
-
-margin-bottom:24px;
+line-height:1.04;
 
 color:var(--classic);
+
+margin-bottom:20px;
 
 }
 
 .meta{
 
-display:flex;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-margin-bottom:60px;
+font-size:15px;
 
 color:#60738a;
-
-}
-
-.intro{
-
-font-size:28px;
-
-line-height:1.8;
-
-font-family:"Playfair Display";
-
-padding:40px;
-
-background:rgba(255,255,255,.4);
-
-border-radius:40px;
 
 margin-bottom:70px;
 
@@ -126,91 +114,69 @@ margin-bottom:70px;
 
 .content{
 
-background:rgba(255,255,255,.28);
+font-size:20px;
 
-padding:60px;
-
-border-radius:50px;
+line-height:2.2;
 
 }
 
 .content p{
 
-font-size:18px;
-
-line-height:2.25;
-
-margin-bottom:34px;
+margin-bottom:36px;
 
 }
 
-.quote{
+blockquote{
 
 font-family:"Playfair Display";
 
-font-size:32px;
+font-size:30px;
 
-line-height:1.6;
+line-height:1.7;
 
-padding:44px;
+padding-left:32px;
 
-margin:60px 0;
+border-left:5px solid var(--classic);
 
-background:var(--surface);
-
-border-left:6px solid var(--classic);
-
-border-radius:30px;
-
-}
-
-.section{
-
-margin-top:70px;
-
-}
-
-.section h2{
-
-font-family:"Playfair Display";
-
-font-size:42px;
-
-margin-bottom:20px;
+margin:55px 0;
 
 color:var(--classic);
 
 }
 
-.sources{
+.works{
 
-margin-top:90px;
+margin-top:100px;
 
-padding-top:50px;
+padding-top:40px;
 
 border-top:1px solid rgba(0,0,0,.12);
 
 }
 
-.sources h2{
+.works h2{
 
 font-family:"Playfair Display";
 
-margin-bottom:28px;
+font-size:34px;
+
+margin-bottom:30px;
 
 }
 
-.sources li{
+.works p{
+
+line-height:2;
 
 margin-bottom:18px;
 
-line-height:1.8;
+font-size:18px;
 
 }
 
 .bottom{
 
-margin-top:100px;
+margin-top:90px;
 
 padding:70px;
 
@@ -219,7 +185,7 @@ border-radius:50px;
 background:linear-gradient(
 135deg,
 #0D3B66,
-#557B99
+#4E7291
 );
 
 color:white;
@@ -232,45 +198,45 @@ text-align:center;
 
 font-family:"Playfair Display";
 
-font-size:52px;
+font-size:48px;
 
-margin-bottom:20px;
+margin-bottom:18px;
 
 }
 
 .bottom p{
 
-line-height:2;
-
 max-width:700px;
 
 margin:auto;
+
+line-height:2;
 
 margin-bottom:30px;
 
 }
 
-.buttons{
+.links{
 
 display:flex;
 
 justify-content:center;
 
-gap:14px;
+gap:16px;
 
 flex-wrap:wrap;
 
 }
 
-.buttons a{
+.links a{
 
 padding:16px 24px;
-
-border-radius:999px;
 
 background:white;
 
 color:var(--classic);
+
+border-radius:999px;
 
 font-weight:700;
 
@@ -278,33 +244,28 @@ font-weight:700;
 
 .footer{
 
-margin-top:36px;
+margin-top:34px;
 
-opacity:.8;
+opacity:.85;
 
 }
 
 @media(max-width:900px){
 
+.article{
+padding:46px;
+}
+
 h1{
 font-size:50px;
 }
 
-.intro{
-font-size:22px;
-}
-
 .content{
-padding:34px;
+font-size:18px;
 }
 
-.quote{
-font-size:24px;
-padding:28px;
-}
-
-.bottom{
-padding:40px;
+blockquote{
+font-size:22px;
 }
 
 }
@@ -323,6 +284,8 @@ padding:40px;
 
 </a>
 
+<div class="article">
+
 <div class="category">
 
 POLICY & SOCIETY • OPINION BRIEF
@@ -337,15 +300,7 @@ Abortion Should Be Legal In All States
 
 <div class="meta">
 
-<div>By Avika Tase</div>
-
-<div>May 26, 2026</div>
-
-</div>
-
-<div class="intro">
-
-Restrictions on abortion access raise questions about bodily autonomy, healthcare access, and whether limiting legal access changes outcomes or simply shifts care into less safe environments.
+By Avika Tase • 05/26/26
 
 </div>
 
@@ -353,73 +308,67 @@ Restrictions on abortion access raise questions about bodily autonomy, healthcar
 
 <p>
 
-Abortion should remain legal in all states because access to reproductive healthcare represents an issue of bodily autonomy and individual choice. Supporters argue that governments should not determine personal medical decisions that directly affect someone's future, health, and ability to make decisions regarding their own body.
+Approximately ninety-eight percent of women ranging from ages fifteen to forty-four do not have access to abortion. As of 2025, around 62.7 million women live in states with abortion bans. Ever since Roe v. Wade was overturned, abortion access has largely been controlled by state governments. Over twenty states have enacted strict laws or complete bans. This raises the question: should abortion be legal in all states? This brief argues that abortion should remain legal nationwide because access is a matter of human rights and because legal restrictions can contribute to unsafe practices.
 
 </p>
 
 <p>
 
-Human rights organizations have argued that access to abortion intersects with broader rights including privacy, equality, healthcare access, and reproductive autonomy. The position presented in this brief is that restrictions on legal access can create broader consequences beyond the procedure itself.
+First, abortion should be legal nationwide because individuals should retain autonomy over decisions involving their own bodies. Supporters argue that governments should not restrict personal reproductive decisions.
 
 </p>
 
-<div class="quote">
+<blockquote>
 
-Legal restrictions do not eliminate demand. They may instead change where and how care is accessed.
+“Countries have obligations to respect, protect, and fulfill human rights including sexual and reproductive health and autonomy.”
 
-</div>
-
-<p>
-
-The brief also argues that barriers including cost, travel requirements, and provider availability may increase reliance on unsafe alternatives. According to public health organizations, unsafe abortion practices can carry significant medical risks.
-
-</p>
+</blockquote>
 
 <p>
 
-Supporters further argue that unequal access places disproportionate burdens on individuals who lack financial resources or live in areas with more restrictive policies.
-
-</p>
-
-<div class="section">
-
-<h2>
-
-Health and Broader Impacts
-
-</h2>
-
-<p>
-
-Beyond physical outcomes, abortion policy may also affect emotional wellbeing, financial stability, and long term life planning. Supporters of broader access argue that legal availability provides safer medical environments and greater healthcare consistency.
+This perspective argues reproductive liberty extends beyond one issue and connects to broader protections involving equality, privacy, safety, and individual rights.
 
 </p>
 
 <p>
 
-The article also discusses concerns including anxiety, isolation, and uncertainty that can arise when individuals face barriers to reproductive healthcare.
+Amnesty International similarly argues that reproductive autonomy is an essential component of human rights and bodily freedom.
 
 </p>
 
-</div>
+<blockquote>
 
-<div class="section">
+“Forcing someone to carry an unwanted pregnancy or seek unsafe abortion is a violation of human rights.”
 
-<h2>
-
-Counterpoint
-
-</h2>
+</blockquote>
 
 <p>
 
-Opponents may argue that abortion policy should remain under state authority and reflect local legal frameworks and community priorities. The debate continues to involve questions of ethics, public policy, and healthcare access.
+Supporters also argue that restrictions can increase unsafe practices when individuals lack financial resources or access to medical care. Costs associated with procedures and travel may create barriers.
+
+</p>
+
+<p>
+
+According to public health organizations, unsafe abortion methods may involve severe health consequences including infection, heavy bleeding, and long term medical complications.
+
+</p>
+
+<p>
+
+Supporters argue that restricting legal access does not remove demand but instead shifts care away from regulated medical environments.
+
+</p>
+
+<p>
+
+Beyond physical health, concerns raised include emotional stress, isolation, anxiety, depression, and broader impacts on well being.
 
 </p>
 
 </div>
 
-<div class="sources">
+<div class="works">
 
 <h2>
 
@@ -427,21 +376,29 @@ Works Cited
 
 </h2>
 
-<ul>
+<p>
+Amnesty International. “Abortion Rights.” Amnesty International, 2022. www.amnesty.org/en/what-we-do/sexual-and-reproductive-rights/abortion-facts/
+</p>
 
-<li>Human Rights Watch</li>
+<p>
+eClinicalMedicine. “Access to Safe Abortion Is a Fundamental Human Right.” Vol. 46, no. 101426, Apr. 2022.
+</p>
 
-<li>Amnesty International</li>
+<p>
+Human Rights Watch. “Access to Abortion Is a Human Right.” 24 June 2022.
+</p>
 
-<li>World Health Organization</li>
+<p>
+Pourreza, Abolghasem, and Aziz Batebi. “Psychological Consequences of Abortion among the Post Abortion Care Seeking Women in Tehran.” Iranian Journal of Psychiatry, vol. 6, no. 1, 2011.
+</p>
 
-<li>eClinicalMedicine</li>
+<p>
+Shah, Iqbal, and Elisabeth Åhman. “Unsafe Abortion: Global and Regional Incidence, Trends, Consequences, and Challenges.” Journal of Obstetrics and Gynaecology Canada, vol. 31, no. 12, Dec. 2009.
+</p>
 
-<li>Iranian Journal of Psychiatry</li>
-
-<li>Journal of Obstetrics and Gynaecology Canada</li>
-
-</ul>
+<p>
+World Health Organization. “Abortion.” 17 May 2024.
+</p>
 
 </div>
 
@@ -457,11 +414,11 @@ Join The Student Brief 360
 
 <p>
 
-Interested in writing, designing, editing, or helping build the website? Join our growing student contributor community.
+Interested in writing, designing, editing, or helping build the website?
 
 </p>
 
-<div class="buttons">
+<div class="links">
 
 <a href="https://forms.gle/VzqCk7xn6ahxU7N38">
 
@@ -500,3 +457,4 @@ The Student Brief 360 | Student Voices. Real-World Impact.
 </body>
 
 </html>
+```
