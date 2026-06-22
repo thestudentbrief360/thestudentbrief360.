@@ -1,597 +1,588 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Student Brief 360</title>
-  <style>
-    :root {
-      --navy: #061b49;
-      --blue: #1769e8;
-      --light-blue: #eaf3ff;
-      --white: #ffffff;
-      --text: #13213c;
-      --muted: #5c6b82;
-      --border: #d7e7ff;
-      --shadow: 0 18px 45px rgba(6, 27, 73, 0.12);
-    }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8fbff;
-      color: var(--text);
-      line-height: 1.6;
-    }
+<title>The Student Brief 360</title>
 
-    a { text-decoration: none; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .nav {
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Newsreader:wght@500;700&display=swap" rel="stylesheet">
 
-    .nav-inner {
-      max-width: 1180px;
-      margin: auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+<style>
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      color: var(--navy);
-      letter-spacing: -0.5px;
-    }
+:root{
 
-    .brand img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+--primary:#6B97FF;
 
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
+--primary-soft:#EEF5FF;
 
-    .nav-links a {
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 14px;
-    }
+--text:#314763;
 
-    .nav-links a:hover { color: var(--blue); }
+--heading:#284A86;
 
-    .nav-cta {
-      background: var(--blue);
-      color: white !important;
-      padding: 10px 16px;
-      border-radius: 999px;
-    }
+--border:#DCEAFF;
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top right, rgba(23,105,232,0.16), transparent 35%),
-        linear-gradient(135deg, white, #eaf3ff);
-    }
+--shadow:0 25px 70px rgba(79,128,255,.12);
 
-    .hero-inner {
-      max-width: 1180px;
-      margin: auto;
-      padding: 88px 22px 76px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 42px;
-      align-items: center;
-    }
+}
 
-    .eyebrow {
-      color: var(--blue);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    h1 {
-      font-size: clamp(44px, 7vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -3px;
-      color: var(--navy);
-      margin-bottom: 24px;
-    }
+body{
 
-    h1 span { color: var(--blue); }
+font-family:Manrope;
 
-    .hero p {
-      font-size: 19px;
-      max-width: 630px;
-      color: #31415a;
-      margin-bottom: 30px;
-    }
+background:#FBFDFF;
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
+color:var(--text);
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 14px 20px;
-      font-weight: 900;
-      border: 2px solid var(--blue);
-    }
+}
 
-    .btn.primary {
-      color: white;
-      background: var(--blue);
-    }
+a{
 
-    .btn.secondary {
-      color: var(--blue);
-      background: white;
-    }
+text-decoration:none;
 
-    .hero-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
+}
 
-    .hero-card img {
-      width: 100%;
-      border-radius: 24px;
-      display: block;
-      margin-bottom: 20px;
-    }
+.container{
 
-    .hero-card h3 {
-      color: var(--navy);
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+max-width:1180px;
 
-    section { padding: 78px 22px; }
+margin:auto;
 
-    .wrap {
-      max-width: 1180px;
-      margin: auto;
-    }
+padding:0 28px;
 
-    .section-heading { margin-bottom: 32px; }
+}
 
-    .section-heading h2 {
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin-bottom: 12px;
-    }
+nav{
 
-    .section-heading p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 820px;
-    }
+padding:24px 0;
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+display:flex;
 
-    .card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: 0 10px 24px rgba(6, 27, 73, 0.06);
-    }
+justify-content:space-between;
 
-    .card h3 {
-      color: var(--blue);
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
+align-items:center;
 
-    .card p { color: #36465f; }
+}
 
-    .topics {
-      background: var(--navy);
-      color: white;
-    }
+.brand{
 
-    .topics .section-heading h2,
-    .topics .section-heading p { color: white; }
+display:flex;
 
-    .topic-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
+gap:12px;
 
-    .topic {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 18px;
-      padding: 18px;
-      min-height: 94px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: 900;
-      transition: 0.2s;
-    }
+align-items:center;
 
-    .topic:hover {
-      background: white;
-      color: var(--navy);
-      transform: translateY(-3px);
-    }
+font-weight:800;
 
-    .format {
-      background: linear-gradient(135deg, #ffffff, #edf5ff);
-    }
+color:var(--heading);
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
+}
 
-    .step {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(6, 27, 73, 0.06);
-    }
+.brand img{
 
-    .num {
-      width: 42px;
-      height: 42px;
-      background: var(--blue);
-      color: white;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
+width:54px;
 
-    .step h3 {
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
+border-radius:50%;
 
-    .sample-section { background: white; }
+}
 
-    .brief-card {
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: white;
-    }
+.links{
 
-    .brief-top {
-      background: var(--navy);
-      color: white;
-      padding: 26px;
-    }
+display:flex;
 
-    .brief-top h3 {
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
+gap:28px;
 
-    .brief-body {
-      padding: 28px;
-      display: grid;
-      gap: 18px;
-    }
+}
 
-    .brief-part {
-      padding: 18px;
-      border-radius: 18px;
-      background: #f4f8ff;
-      border: 1px solid var(--border);
-    }
+.links a{
 
-    .brief-part strong {
-      color: var(--blue);
-      display: block;
-      margin-bottom: 5px;
-    }
+color:var(--heading);
 
-    .join {
-      background:
-        radial-gradient(circle at bottom left, rgba(23,105,232,0.16), transparent 32%),
-        linear-gradient(135deg, white, #eaf3ff);
-      text-align: center;
-    }
+}
 
-    .join .section-heading p { margin: auto; }
+.button{
 
-    .contact-box {
-      margin: 28px auto 0;
-      max-width: 760px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 14px;
-    }
+background:var(--primary);
 
-    .contact-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
+padding:14px 24px;
 
-    .small {
-      color: var(--muted);
-      font-size: 14px;
-    }
+border-radius:999px;
 
-    footer {
-      background: var(--navy);
-      color: white;
-      padding: 30px 22px;
-      text-align: center;
-    }
+color:white;
 
-    @media (max-width: 900px) {
-      .hero-inner, .grid-3, .steps { grid-template-columns: 1fr; }
-      .topic-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { display: none; }
-    }
+font-weight:700;
 
-    @media (max-width: 520px) {
-      .topic-grid { grid-template-columns: 1fr; }
-      h1 { letter-spacing: -1.5px; }
-    }
-  </style>
+}
+
+.hero{
+
+padding:90px 0;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+.hero h1{
+
+font-family:Newsreader;
+
+font-size:76px;
+
+line-height:1;
+
+color:var(--heading);
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+}
+
+.hero-card{
+
+background:white;
+
+padding:28px;
+
+border-radius:32px;
+
+box-shadow:var(--shadow);
+
+}
+
+.hero-card img{
+
+width:100%;
+
+border-radius:22px;
+
+}
+
+.section{
+
+padding:90px 0;
+
+}
+
+.title{
+
+font-family:Newsreader;
+
+font-size:52px;
+
+color:var(--heading);
+
+margin-bottom:18px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
+
+.card{
+
+background:white;
+
+padding:28px;
+
+border-radius:28px;
+
+box-shadow:var(--shadow);
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+color:var(--heading);
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.stat{
+
+background:var(--primary-soft);
+
+padding:30px;
+
+border-radius:24px;
+
+text-align:center;
+
+}
+
+.stat h2{
+
+font-size:42px;
+
+color:var(--heading);
+
+}
+
+.footer{
+
+padding:50px;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.hero-grid,
+.grid,
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+}
+
+.links{
+
+display:none;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#home">
-        <img src="logo.jpeg" alt="The Student Brief 360 logo">
-        <span>The Student Brief 360</span>
-      </a>
+<div class="container">
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#briefs">Briefs</a>
-        <a href="#format">Brief Format</a>
-        <a href="#samples">Samples</a>
-        <a href="#join" class="nav-cta">Apply</a>
-      </nav>
-    </div>
-  </header>
+<nav>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div>
-          <div class="eyebrow">Student-led. Issue-focused. Impact-driven.</div>
-          <h1>Student Voices. <span>Real-World Impact.</span></h1>
-          <p>
-            The Student Brief 360 is a student-led platform where students write about
-            real issues, share clear perspectives, and start meaningful conversations.
-          </p>
+<div class="brand">
 
-          <div class="buttons">
-            <a class="btn primary" href="https://forms.gle/9TAiuZUspxNwfsWC9" target="_blank">Apply to Contribute</a>
-            <a class="btn secondary" href="#format">Learn Brief Format</a>
-          </div>
-        </div>
+<img src="logo.jpeg">
 
-        <div class="hero-card">
-          <img src="intro-post.jpeg" alt="Introducing The Student Brief 360">
-          <h3>Your voice today. Real impact tomorrow.</h3>
-          <p>
-            We help students turn ideas into organized briefs that are easy to read,
-            thoughtful, and connected to the real world.
-          </p>
-        </div>
-      </div>
-    </section>
+<div>
 
-    <section id="about">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>About Us</h2>
-          <p>
-            We created The Student Brief 360 because youth voices are often left out of
-            conversations that affect students directly.
-          </p>
-        </div>
+The Student Brief 360
 
-        <div class="grid-3">
-          <div class="card">
-            <h3>Our Mission</h3>
-            <p>
-              To amplify student voices through short, structured briefs on real-world issues.
-            </p>
-          </div>
+</div>
 
-          <div class="card">
-            <h3>What We Do</h3>
-            <p>
-              We publish student perspectives on topics like education, policy, finance,
-              technology, law, and social issues.
-            </p>
-          </div>
+</div>
 
-          <div class="card">
-            <h3>Why It Matters</h3>
-            <p>
-              Students should have a space to explain what they think, why it matters,
-              and how it connects to society.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="links">
 
-    <section class="topics" id="briefs">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Brief Topics</h2>
-          <p>Our briefs cover the issues students care about most.</p>
-        </div>
+<a href="about.html">About</a>
 
-        <div class="topic-grid">
-          <div class="topic">Law / Justice System</div>
-          <div class="topic">Business / Finance</div>
-          <div class="topic">Public Policy</div>
-          <div class="topic">Education</div>
-          <div class="topic">Social Issues</div>
-          <div class="topic">Banking / Debt</div>
-          <div class="topic">College Admissions</div>
-          <div class="topic">Technology / AI</div>
-          <div class="topic">Social Media</div>
-          <div class="topic">Current Events</div>
-        </div>
-      </div>
-    </section>
+<a href="briefs.html">Briefs</a>
 
-    <section class="format" id="format">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>What Is a Brief?</h2>
-          <p>
-            A brief is a short, structured response that makes a clear point and explains
-            why it matters.
-          </p>
-        </div>
+<a href="contributors.html">Contributors</a>
 
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h3>Claim</h3>
-            <p>A clear stance in 1 to 2 sentences.</p>
-          </div>
+<a href="apply.html" class="button">
 
-          <div class="step">
-            <div class="num">2</div>
-            <h3>Reasoning</h3>
-            <p>2 to 4 points that explain and support the claim.</p>
-          </div>
+Apply
 
-          <div class="step">
-            <div class="num">3</div>
-            <h3>Real-World Impact</h3>
-            <p>2 to 3 sentences on how the topic affects students or society.</p>
-          </div>
+</a>
 
-          <div class="step">
-            <div class="num">4</div>
-            <h3>Counterarguments</h3>
-            <p>An optional response to the other side of the issue.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section class="sample-section" id="samples">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Sample Brief</h2>
-          <p>This is a sample format. You can replace this with your real briefs later.</p>
-        </div>
+</nav>
 
-        <div class="brief-card">
-          <div class="brief-top">
-            <h3>Should Internships Be Paid?</h3>
-            <p>Example Brief</p>
-          </div>
+<section class="hero">
 
-          <div class="brief-body">
-            <div class="brief-part">
-              <strong>Claim</strong>
-              Yes, internships should be paid because students contribute real work and deserve fair compensation.
-            </div>
+<div class="hero-grid">
 
-            <div class="brief-part">
-              <strong>Reasoning</strong>
-              Paid internships recognize student effort, reduce financial barriers, and make opportunities more accessible.
-            </div>
+<div>
 
-            <div class="brief-part">
-              <strong>Real-World Impact</strong>
-              Paid internships help students from different backgrounds gain experience without taking on financial stress.
-              This can lead to a more diverse and prepared workforce.
-            </div>
+<div style="color:#6B97FF;font-weight:800;margin-bottom:18px">
 
-            <div class="brief-part">
-              <strong>Counterargument</strong>
-              Some argue internships are mainly for learning. However, learning and fair pay can exist at the same time.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+STUDENT MEDIA PLATFORM
 
-    <section class="join" id="join">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Join The Student Brief 360</h2>
-          <p>
-            Interested in writing, designing, editing, or helping build the website?
-            We are accepting applications until the end of June.
-          </p>
-        </div>
+</div>
 
-        <div class="contact-box">
-          <div class="contact-row">
-            <a class="btn primary" href="https://forms.gle/9TAiuZUspxNwfsWC9" target="_blank">Application Form</a>
-            <a class="btn secondary" href="mailto:thestudentbrief360@gmail.com">Email Us</a>
-            <a class="btn secondary" href="https://www.instagram.com/thestudentbrief360/" target="_blank">Instagram</a>
-          </div>
-          <p class="small">
-            Email: thestudentbrief360@gmail.com | Instagram: @thestudentbrief360
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+<h1>
 
-  <footer>
-    <p>The Student Brief 360 | Student Voices. Real-World Impact.</p>
-  </footer>
+Student ideas made accessible.
+
+</h1>
+
+<p>
+
+Student Brief 360 publishes concise issue briefs written by students for students—making complex topics easier to understand and discuss.
+
+</p>
+
+<a class="button" href="briefs.html">
+
+Read Briefs
+
+</a>
+
+</div>
+
+<div class="hero-card">
+
+<img src="intro-post.jpeg">
+
+<h2 style="margin-top:20px">
+
+Your voice can create impact.
+
+</h2>
+
+<p>
+
+Join a growing network of student writers, researchers, and creators building thoughtful educational media.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+
+Why We Exist
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Accessible Information
+
+</h3>
+
+<p>
+
+We simplify topics into short, structured briefs.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Student Perspectives
+
+</h3>
+
+<p>
+
+Students should contribute to conversations shaping their future.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Real Impact
+
+</h3>
+
+<p>
+
+Publishing builds communication, leadership, and civic engagement.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+
+Community Snapshot
+
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>
+
+11
+
+</h2>
+
+Contributors
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+110+
+
+</h2>
+
+Followers
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+2
+
+</h2>
+
+Published Briefs
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+2026
+
+</h2>
+
+Founded
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">
+
+Start Reading
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Abortion Brief
+
+</h3>
+
+<p>
+
+Education • Policy
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Should Internships Be Paid?
+
+</h3>
+
+<p>
+
+Work • Opportunity
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Coming Soon
+
+</h3>
+
+<p>
+
+Technology • Finance
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+
+Student Brief 360
+
+</div>
+
+</div>
 
 </body>
 </html>
+```
