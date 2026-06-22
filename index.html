@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,18 +21,21 @@
 --dusty:#7F9DB1;
 --sky:#B4D6E3;
 
---bg:#D8E6ED;
---card:#EDF4F7;
+--bg:#DCE8EE;
 
---text:#173D62;
+--card:#ECF3F6;
+
+--text:#17314E;
 
 }
 
 .dark{
 
---bg:#17293C;
---card:#21374F;
---text:#EAF4FF;
+--bg:#13212F;
+
+--card:#1A3046;
+
+--text:#EAF5FF;
 
 }
 
@@ -44,42 +47,45 @@ box-sizing:border-box;
 
 body{
 
-font-family:Arial,sans-serif;
+font-family:"Plus Jakarta Sans";
 
 background:var(--bg);
 
 color:var(--text);
 
-transition:.3s;
+transition:.25s;
 
 }
 
 .container{
 
-max-width:1280px;
+max-width:1300px;
 
 margin:auto;
 
-padding:34px;
+padding:36px;
 
 }
 
 a{
+
 text-decoration:none;
+
 color:inherit;
+
 }
 
 .toggle{
 
 position:fixed;
 
-left:24px;
+left:26px;
 
-top:24px;
+top:26px;
 
-width:52px;
+width:56px;
 
-height:52px;
+height:56px;
 
 border-radius:50%;
 
@@ -109,7 +115,7 @@ padding-bottom:90px;
 
 display:flex;
 
-gap:14px;
+gap:16px;
 
 align-items:center;
 
@@ -117,7 +123,7 @@ align-items:center;
 
 .brand img{
 
-width:60px;
+width:62px;
 
 border-radius:50%;
 
@@ -125,7 +131,7 @@ border-radius:50%;
 
 .brand span{
 
-font-family:Playfair Display;
+font-family:"Playfair Display";
 
 font-size:30px;
 
@@ -157,39 +163,57 @@ color:white;
 
 display:grid;
 
-grid-template-columns:1.2fr .8fr;
+grid-template-columns:1.1fr .9fr;
 
-gap:70px;
+gap:60px;
 
 align-items:center;
 
-padding-bottom:120px;
+padding-bottom:140px;
 
 }
 
 .hero h1{
 
-font-family:Playfair Display;
+font-family:"Playfair Display";
 
 font-size:84px;
 
 line-height:1;
 
-margin-bottom:24px;
+margin-bottom:22px;
 
 }
 
 .hero p{
 
-font-size:22px;
+font-size:20px;
 
-line-height:1.8;
+line-height:1.9;
 
 max-width:650px;
 
 }
 
-.hero-buttons{
+.hero-card{
+
+background:var(--card);
+
+padding:28px;
+
+border-radius:40px;
+
+}
+
+.hero-card img{
+
+width:100%;
+
+border-radius:28px;
+
+}
+
+.buttons{
 
 margin-top:36px;
 
@@ -221,49 +245,31 @@ border:1px solid var(--dusty);
 
 }
 
-.hero-card{
-
-background:var(--card);
-
-padding:26px;
-
-border-radius:40px;
-
-}
-
-.hero-card img{
-
-width:100%;
-
-border-radius:28px;
-
-}
-
 .section{
 
-padding:90px 0;
+padding:110px 0;
 
 }
 
 .title{
 
-font-family:Playfair Display;
+font-family:"Playfair Display";
 
-font-size:58px;
+font-size:62px;
 
-margin-bottom:20px;
+margin-bottom:24px;
 
 }
 
 .subtitle{
 
-max-width:850px;
+font-size:20px;
 
-font-size:19px;
+line-height:2;
 
-line-height:1.8;
+max-width:950px;
 
-margin-bottom:44px;
+margin-bottom:50px;
 
 }
 
@@ -273,7 +279,7 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:24px;
+gap:26px;
 
 }
 
@@ -281,17 +287,25 @@ gap:24px;
 
 background:var(--card);
 
-padding:36px;
+padding:40px;
 
-border-radius:32px;
+border-radius:36px;
 
 }
 
 .card h3{
 
-font-family:Playfair Display;
+font-family:"Playfair Display";
 
 margin-bottom:18px;
+
+font-size:32px;
+
+}
+
+.card p{
+
+line-height:1.9;
 
 }
 
@@ -299,9 +313,9 @@ margin-bottom:18px;
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(3,1fr);
 
-gap:18px;
+gap:22px;
 
 }
 
@@ -309,25 +323,25 @@ gap:18px;
 
 background:var(--card);
 
-padding:32px;
+padding:42px;
 
-border-radius:30px;
-
-text-align:center;
+border-radius:36px;
 
 }
 
 .stat h2{
 
-font-family:Playfair Display;
+font-family:"Playfair Display";
 
-font-size:52px;
+font-size:58px;
+
+margin-bottom:10px;
 
 }
 
 footer{
 
-padding:60px;
+padding:80px;
 
 text-align:center;
 
@@ -353,7 +367,7 @@ display:none;
 
 .hero h1{
 
-font-size:56px;
+font-size:58px;
 
 }
 
@@ -411,29 +425,31 @@ Apply
 
 </nav>
 
+
+
 <section class="hero">
 
 <div>
 
-<div style="letter-spacing:2px;color:#557590">
+<div style="letter-spacing:2px;color:#5B7C93">
 
-STUDENT LED PUBLICATION
+STUDENT LED EDUCATIONAL MEDIA
 
 </div>
 
 <h1>
 
-Student ideas made clear.
+Student ideas made accessible.
 
 </h1>
 
 <p>
 
-Student Brief 360 transforms complex issues into concise educational briefs written by students and designed to help students engage with topics that matter.
+Student Brief 360 publishes concise educational briefs written by students and designed to help students understand complex topics clearly.
 
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
 <a class="button primary" href="briefs.html">
 
@@ -443,7 +459,7 @@ Explore Briefs
 
 <a class="button secondary" href="about.html">
 
-Our Mission
+Learn More
 
 </a>
 
@@ -459,17 +475,19 @@ Our Mission
 
 </section>
 
+
+
 <section class="section">
 
 <div class="title">
 
-Our Story
+The Problem We're Solving
 
 </div>
 
 <div class="subtitle">
 
-Students are surrounded by information but rarely given accessible ways to understand it. Student Brief 360 was created to bridge that gap through concise, student written educational briefs that make complex issues easier to engage with.
+Students today are surrounded by more information than ever before. Yet most of it is either too complex, too biased, or simply not designed with students in mind.
 
 </div>
 
@@ -479,11 +497,17 @@ Students are surrounded by information but rarely given accessible ways to under
 
 <h3>
 
-Mission
+Information Overload
 
 </h3>
 
-Create clear educational content that helps students build understanding and confidence across real world issues.
+<p>
+
+Modern students navigate news alerts, social platforms, academic content, and competing perspectives every day.
+
+Finding clear, trustworthy information takes time and often feels inaccessible.
+
+</p>
 
 </div>
 
@@ -491,11 +515,15 @@ Create clear educational content that helps students build understanding and con
 
 <h3>
 
-Approach
+Why It Matters
 
 </h3>
 
-Short structured briefs designed to be approachable while maintaining depth and thoughtful analysis.
+<p>
+
+Without digestible resources, students may disengage from important topics or form opinions using incomplete information.
+
+</p>
 
 </div>
 
@@ -503,11 +531,17 @@ Short structured briefs designed to be approachable while maintaining depth and 
 
 <h3>
 
-Vision
+Our Solution
 
 </h3>
 
-Build a student publication that empowers students to contribute ideas rather than only consume information.
+<p>
+
+Student Brief 360 publishes short educational briefs that explain complex topics clearly and efficiently.
+
+Designed to be read in minutes and understood immediately.
+
+</p>
 
 </div>
 
@@ -515,11 +549,19 @@ Build a student publication that empowers students to contribute ideas rather th
 
 </section>
 
+
+
 <section class="section">
 
 <div class="title">
 
-Community
+Our Team
+
+</div>
+
+<div class="subtitle">
+
+Built by students and shaped by collaborative leadership.
 
 </div>
 
@@ -529,11 +571,11 @@ Community
 
 <h2>
 
-11
+100%
 
 </h2>
 
-Contributors
+Student Led
 
 </div>
 
@@ -541,11 +583,11 @@ Contributors
 
 <h2>
 
-110+
+6+
 
 </h2>
 
-Followers
+Topic Areas
 
 </div>
 
@@ -553,23 +595,11 @@ Followers
 
 <h2>
 
-2
+Growing
 
 </h2>
 
-Briefs
-
-</div>
-
-<div class="stat">
-
-<h2>
-
-2026
-
-</h2>
-
-Founded
+Contributor Network
 
 </div>
 
@@ -577,11 +607,13 @@ Founded
 
 </section>
 
+
+
 <section class="section">
 
 <div class="title">
 
-Featured Briefs
+Our Vision
 
 </div>
 
@@ -591,11 +623,15 @@ Featured Briefs
 
 <h3>
 
-Abortion Brief
+Accessible to All
 
 </h3>
 
-Education • Policy
+<p>
+
+Clear educational content available to every student.
+
+</p>
 
 </div>
 
@@ -603,11 +639,15 @@ Education • Policy
 
 <h3>
 
-Should Internships Be Paid
+Student Created
 
 </h3>
 
-Careers • Opportunity
+<p>
+
+Every brief is researched and created by students.
+
+</p>
 
 </div>
 
@@ -615,17 +655,23 @@ Careers • Opportunity
 
 <h3>
 
-Coming Soon
+Impact Driven
 
 </h3>
 
-New submissions.
+<p>
+
+Content designed to encourage critical thinking and engagement.
+
+</p>
 
 </div>
 
 </div>
 
 </section>
+
+
 
 <footer>
 
