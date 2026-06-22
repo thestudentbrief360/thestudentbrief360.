@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,26 +9,36 @@
 
 <title>The Student Brief 360</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Newsreader:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
+@font-face{
+font-family:"Glacial";
+src:local("Glacial Indifference");
+}
+
 :root{
 
---primary:#6B97FF;
+--classic:#0D3B66;
+--dusty:#7F9DB1;
+--sky:#B4D6E3;
 
---primary-soft:#EEF5FF;
+--bg:#DCE8EE;
 
---text:#314763;
+--card:#EAF1F5;
 
---heading:#284A86;
+--text:#153654;
 
---border:#DCEAFF;
+}
 
---shadow:0 25px 70px rgba(79,128,255,.12);
+.dark{
+
+--bg:#122131;
+
+--card:#183149;
+
+--text:#E4EEF6;
 
 }
 
@@ -39,33 +50,60 @@ box-sizing:border-box;
 
 body{
 
-font-family:Manrope;
+font-family:"Glacial",Arial,sans-serif;
 
-background:#FBFDFF;
+background:var(--bg);
 
 color:var(--text);
+
+transition:.35s;
 
 }
 
 a{
-
 text-decoration:none;
-
 }
 
 .container{
 
-max-width:1180px;
+max-width:1220px;
 
 margin:auto;
 
-padding:0 28px;
+padding:30px;
+
+}
+
+.toggle{
+
+position:fixed;
+
+left:24px;
+
+top:26px;
+
+width:52px;
+
+height:52px;
+
+border-radius:50%;
+
+background:var(--card);
+
+display:grid;
+
+place-items:center;
+
+cursor:pointer;
+
+font-size:22px;
+
+box-shadow:
+0 8px 40px rgba(0,0,0,.08);
 
 }
 
 nav{
-
-padding:24px 0;
 
 display:flex;
 
@@ -73,27 +111,35 @@ justify-content:space-between;
 
 align-items:center;
 
+padding:12px 0 80px;
+
 }
 
 .brand{
 
 display:flex;
 
-gap:12px;
+gap:16px;
 
 align-items:center;
-
-font-weight:800;
-
-color:var(--heading);
 
 }
 
 .brand img{
 
-width:54px;
+width:64px;
 
 border-radius:50%;
+
+}
+
+.brand span{
+
+font-family:"Playfair Display";
+
+font-size:28px;
+
+color:var(--classic);
 
 }
 
@@ -101,79 +147,119 @@ border-radius:50%;
 
 display:flex;
 
-gap:28px;
+gap:36px;
 
 }
 
 .links a{
 
-color:var(--heading);
+color:var(--classic);
+
+font-size:17px;
 
 }
 
-.button{
+.apply{
 
-background:var(--primary);
+background:var(--classic);
 
-padding:14px 24px;
+padding:14px 22px;
 
 border-radius:999px;
 
-color:white;
-
-font-weight:700;
+color:white !important;
 
 }
 
 .hero{
 
-padding:90px 0;
-
-}
-
-.hero-grid{
-
 display:grid;
 
-grid-template-columns:1.2fr .8fr;
+grid-template-columns:1.15fr .85fr;
 
-gap:50px;
+gap:60px;
 
 align-items:center;
 
+padding-bottom:120px;
+
 }
 
-.hero h1{
+.small{
 
-font-family:Newsreader;
+color:var(--dusty);
 
-font-size:76px;
+letter-spacing:2px;
+
+font-size:14px;
+
+margin-bottom:16px;
+
+}
+
+h1{
+
+font-family:"Playfair Display";
+
+font-size:88px;
 
 line-height:1;
 
-color:var(--heading);
-
-margin-bottom:20px;
+margin-bottom:24px;
 
 }
 
 .hero p{
 
-font-size:20px;
+font-size:22px;
 
-margin-bottom:30px;
+max-width:620px;
+
+color:#496278;
+
+}
+
+.actions{
+
+margin-top:40px;
+
+display:flex;
+
+gap:18px;
+
+}
+
+.button{
+
+padding:16px 26px;
+
+border-radius:999px;
+
+}
+
+.primary{
+
+background:var(--classic);
+
+color:white;
+
+}
+
+.secondary{
+
+border:1px solid var(--dusty);
+
+color:var(--classic);
 
 }
 
 .hero-card{
 
-background:white;
+background:var(--card);
 
-padding:28px;
+padding:24px;
 
-border-radius:32px;
-
-box-shadow:var(--shadow);
+border-radius:38px;
 
 }
 
@@ -181,7 +267,15 @@ box-shadow:var(--shadow);
 
 width:100%;
 
-border-radius:22px;
+border-radius:26px;
+
+}
+
+.hero-card h2{
+
+font-family:"Playfair Display";
+
+margin-top:18px;
 
 }
 
@@ -193,13 +287,21 @@ padding:90px 0;
 
 .title{
 
-font-family:Newsreader;
+font-family:"Playfair Display";
 
-font-size:52px;
-
-color:var(--heading);
+font-size:58px;
 
 margin-bottom:18px;
+
+}
+
+.subtitle{
+
+max-width:700px;
+
+color:#587088;
+
+margin-bottom:36px;
 
 }
 
@@ -209,27 +311,25 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:22px;
+gap:24px;
 
 }
 
 .card{
 
-background:white;
+background:var(--card);
 
-padding:28px;
+padding:34px;
 
-border-radius:28px;
-
-box-shadow:var(--shadow);
+border-radius:32px;
 
 }
 
 .card h3{
 
-margin-bottom:10px;
+font-family:"Playfair Display";
 
-color:var(--heading);
+margin-bottom:14px;
 
 }
 
@@ -245,11 +345,11 @@ gap:20px;
 
 .stat{
 
-background:var(--primary-soft);
+background:var(--card);
 
-padding:30px;
+padding:34px;
 
-border-radius:24px;
+border-radius:32px;
 
 text-align:center;
 
@@ -257,23 +357,27 @@ text-align:center;
 
 .stat h2{
 
-font-size:42px;
+font-family:"Playfair Display";
 
-color:var(--heading);
+font-size:54px;
+
+color:var(--classic);
 
 }
 
-.footer{
+footer{
 
-padding:50px;
+padding:80px 0;
 
 text-align:center;
 
+color:var(--dusty);
+
 }
 
-@media(max-width:900px){
+@media(max-width:920px){
 
-.hero-grid,
+.hero,
 .grid,
 .stats{
 
@@ -281,15 +385,15 @@ grid-template-columns:1fr;
 
 }
 
-.hero h1{
-
-font-size:54px;
-
-}
-
 .links{
 
 display:none;
+
+}
+
+h1{
+
+font-size:62px;
 
 }
 
@@ -301,6 +405,14 @@ display:none;
 
 <body>
 
+<div
+class="toggle"
+onclick="document.body.classList.toggle('dark')">
+
+☀️
+
+</div>
+
 <div class="container">
 
 <nav>
@@ -309,11 +421,11 @@ display:none;
 
 <img src="logo.jpeg">
 
-<div>
+<span>
 
-The Student Brief 360
+Student Brief 360
 
-</div>
+</span>
 
 </div>
 
@@ -323,9 +435,15 @@ The Student Brief 360
 
 <a href="briefs.html">Briefs</a>
 
-<a href="contributors.html">Contributors</a>
+<a href="contributors.html">
 
-<a href="apply.html" class="button">
+Contributors
+
+</a>
+
+<a
+class="apply"
+href="apply.html">
 
 Apply
 
@@ -337,11 +455,9 @@ Apply
 
 <section class="hero">
 
-<div class="hero-grid">
-
 <div>
 
-<div style="color:#6B97FF;font-weight:800;margin-bottom:18px">
+<div class="small">
 
 STUDENT MEDIA PLATFORM
 
@@ -349,21 +465,35 @@ STUDENT MEDIA PLATFORM
 
 <h1>
 
-Student ideas made accessible.
+Ideas deserve space.
 
 </h1>
 
 <p>
 
-Student Brief 360 publishes concise issue briefs written by students for students—making complex topics easier to understand and discuss.
+Student Brief 360 turns difficult issues into thoughtful, concise briefs created by students and designed to be accessible.
 
 </p>
 
-<a class="button" href="briefs.html">
+<div class="actions">
+
+<a
+class="button primary"
+href="briefs.html">
 
 Read Briefs
 
 </a>
+
+<a
+class="button secondary"
+href="about.html">
+
+Our Mission
+
+</a>
+
+</div>
 
 </div>
 
@@ -371,19 +501,12 @@ Read Briefs
 
 <img src="intro-post.jpeg">
 
-<h2 style="margin-top:20px">
+<h2>
 
-Your voice can create impact.
+Student perspectives.
+Real conversations.
 
 </h2>
-
-<p>
-
-Join a growing network of student writers, researchers, and creators building thoughtful educational media.
-
-</p>
-
-</div>
 
 </div>
 
@@ -391,11 +514,17 @@ Join a growing network of student writers, researchers, and creators building th
 
 <section class="section">
 
-<h2 class="title">
+<div class="title">
 
-Why We Exist
+Why Student Brief 360
 
-</h2>
+</div>
+
+<div class="subtitle">
+
+Students deserve opportunities to publish ideas, communicate clearly, and engage with issues shaping their futures.
+
+</div>
 
 <div class="grid">
 
@@ -403,15 +532,11 @@ Why We Exist
 
 <h3>
 
-Accessible Information
+Accessible
 
 </h3>
 
-<p>
-
-We simplify topics into short, structured briefs.
-
-</p>
+Short structured briefs.
 
 </div>
 
@@ -419,15 +544,11 @@ We simplify topics into short, structured briefs.
 
 <h3>
 
-Student Perspectives
+Thoughtful
 
 </h3>
 
-<p>
-
-Students should contribute to conversations shaping their future.
-
-</p>
+Student-led perspectives.
 
 </div>
 
@@ -435,15 +556,11 @@ Students should contribute to conversations shaping their future.
 
 <h3>
 
-Real Impact
+Impactful
 
 </h3>
 
-<p>
-
-Publishing builds communication, leadership, and civic engagement.
-
-</p>
+Publishing with purpose.
 
 </div>
 
@@ -453,11 +570,11 @@ Publishing builds communication, leadership, and civic engagement.
 
 <section class="section">
 
-<h2 class="title">
+<div class="title">
 
-Community Snapshot
+Community
 
-</h2>
+</div>
 
 <div class="stats">
 
@@ -513,76 +630,33 @@ Founded
 
 </section>
 
-<section class="section">
-
-<h2 class="title">
-
-Start Reading
-
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-
-Abortion Brief
-
-</h3>
-
-<p>
-
-Education • Policy
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Should Internships Be Paid?
-
-</h3>
-
-<p>
-
-Work • Opportunity
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Coming Soon
-
-</h3>
-
-<p>
-
-Technology • Finance
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="footer">
+<footer>
 
 Student Brief 360
 
-</div>
+</footer>
 
 </div>
+
+<script>
+
+const toggle=document.querySelector(".toggle")
+
+toggle.onclick=()=>{
+
+document.body.classList.toggle("dark")
+
+toggle.innerHTML=
+
+document.body.classList.contains("dark")
+
+?"☾":"☀️"
+
+}
+
+</script>
 
 </body>
+
 </html>
 ```
