@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Briefs | The Student Brief 360</title>
 
@@ -32,260 +33,203 @@ box-sizing:border-box;
 }
 
 body{
-
 background:var(--bg);
-
 font-family:"Balsamiq Sans";
-
 color:var(--text);
-
 }
 
 .container{
-
-max-width:1200px;
-
+max-width:1220px;
 margin:auto;
-
-padding:36px;
-
+padding:42px;
 }
 
 a{
-
 text-decoration:none;
-
 color:inherit;
-
 }
 
 nav{
-
 display:flex;
-
 justify-content:space-between;
-
-padding-bottom:90px;
-
+align-items:center;
+margin-bottom:90px;
 }
 
 .logo{
+font-family:"Playfair Display";
+font-size:34px;
+}
+
+.links{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.apply{
+background:var(--classic);
+color:white;
+padding:14px 22px;
+border-radius:999px;
+}
+
+.hero{
+padding-bottom:70px;
+}
+
+.hero h1{
+font-family:"Playfair Display";
+font-size:78px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:760px;
+line-height:2;
+font-size:20px;
+}
+
+.section-title{
+font-family:"Playfair Display";
+font-size:54px;
+margin-bottom:36px;
+}
+
+.topic-list{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+details{
+
+background:
+rgba(255,255,255,.45);
+
+padding:32px;
+
+border-radius:36px;
+
+backdrop-filter:blur(12px);
+
+}
+
+summary{
+
+font-family:"Playfair Display";
+
+font-size:34px;
+
+cursor:pointer;
+
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+.bubble-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(340px,1fr));
+
+gap:22px;
+
+margin-top:26px;
+
+}
+
+.bubble{
+
+background:white;
+
+padding:34px;
+
+border-radius:30px;
+
+transition:.25s;
+
+display:block;
+
+}
+
+.bubble:hover{
+
+transform:translateY(-6px);
+
+}
+
+.type{
+
+color:var(--dusty);
+
+margin-bottom:14px;
+
+}
+
+.bubble h3{
 
 font-family:"Playfair Display";
 
 font-size:32px;
 
-}
+line-height:1.2;
 
-.links{
-
-display:flex;
-
-gap:34px;
-
-align-items:center;
+margin-bottom:14px;
 
 }
 
-.apply{
+.author{
 
-background:var(--classic);
+opacity:.7;
 
-color:white;
-
-padding:14px 22px;
-
-border-radius:999px;
+margin-bottom:18px;
 
 }
 
-.hero{
+.bubble p{
 
-padding-bottom:100px;
+line-height:1.8;
 
-}
-
-.hero h1{
-
-font-family:"Playfair Display";
-
-font-size:82px;
-
-line-height:1;
-
-margin-bottom:22px;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-max-width:720px;
-
-line-height:2;
-
-}
-
-.categories{
-
-display:flex;
-
-gap:14px;
-
-flex-wrap:wrap;
-
-margin-bottom:60px;
-
-}
-
-.categories div{
-
-padding:12px 18px;
-
-background:rgba(255,255,255,.45);
-
-border-radius:999px;
-
-}
-
-.featured{
-
-background:var(--surface);
-
-padding:50px;
-
-border-radius:50px;
-
-margin-bottom:90px;
-
-}
-
-.featured small{
-
-color:var(--dusty);
-
-letter-spacing:2px;
-
-}
-
-.featured h2{
-
-font-family:"Playfair Display";
-
-font-size:52px;
-
-margin:18px 0;
-
-}
-
-.preview{
-
-line-height:2;
-
-max-width:780px;
+margin-bottom:20px;
 
 }
 
 .read{
 
-margin-top:30px;
-
-display:inline-block;
-
-background:var(--classic);
-
-color:white;
-
-padding:16px 26px;
-
-border-radius:999px;
-
-}
-
-.section-title{
-
-font-family:"Playfair Display";
-
-font-size:56px;
-
-margin-bottom:40px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:28px;
-
-}
-
-.article{
-
-background:
-
-rgba(255,255,255,.32);
-
-backdrop-filter:blur(12px);
-
-padding:40px;
-
-border-radius:40px;
-
-}
-
-.tag{
-
-display:inline-block;
-
-margin-bottom:18px;
-
-color:var(--dusty);
-
-}
-
-.article h3{
-
-font-family:"Playfair Display";
-
-font-size:38px;
-
-margin-bottom:16px;
-
-}
-
-.article p{
-
-line-height:2;
-
-margin-bottom:24px;
-
-}
-
-.article a{
-
 font-weight:700;
+
+color:var(--classic);
+
+}
+
+.placeholder{
+
+opacity:.7;
 
 }
 
 .submit{
 
-margin-top:120px;
+margin-top:100px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--classic),
+#376792
+);
 
 padding:80px;
 
-background:linear-gradient(
-135deg,
-var(--classic),
-#35658F
-);
+border-radius:60px;
 
 color:white;
-
-border-radius:60px;
 
 text-align:center;
 
@@ -295,7 +239,7 @@ text-align:center;
 
 font-family:"Playfair Display";
 
-font-size:58px;
+font-size:56px;
 
 margin-bottom:18px;
 
@@ -303,35 +247,53 @@ margin-bottom:18px;
 
 .submit p{
 
-max-width:700px;
+max-width:720px;
 
 margin:auto;
 
 line-height:2;
 
-margin-bottom:30px;
+}
+
+.contact{
+
+margin-top:32px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
 
 }
 
-.submit a{
-
-display:inline-block;
-
-padding:18px 28px;
+.contact a{
 
 background:white;
 
-color:var(--classic);
+padding:16px 24px;
 
 border-radius:999px;
+
+color:var(--classic);
 
 font-weight:700;
 
 }
 
+.footer-info{
+
+margin-top:28px;
+
+opacity:.9;
+
+}
+
 footer{
 
-padding:90px;
+padding:80px;
 
 text-align:center;
 
@@ -339,22 +301,12 @@ text-align:center;
 
 @media(max-width:900px){
 
-.grid{
-
-grid-template-columns:1fr;
-
+.links{
+display:none;
 }
 
 .hero h1{
-
-font-size:54px;
-
-}
-
-.links{
-
-display:none;
-
+font-size:56px;
 }
 
 }
@@ -370,9 +322,7 @@ display:none;
 <nav>
 
 <div class="logo">
-
 The Student Brief 360
-
 </div>
 
 <div class="links">
@@ -390,154 +340,222 @@ The Student Brief 360
 <section class="hero">
 
 <h1>
-
 Student Brief Library
-
 </h1>
 
 <p>
-
-Explore student-written briefs that break down complex topics into concise, accessible articles designed to inform, challenge perspectives, and encourage thoughtful discussion.
-
+Explore student-written briefs designed to make complex topics easier to understand through concise, thoughtful educational writing.
 </p>
 
 </section>
 
-<div class="categories">
 
-<div>Education</div>
-
-<div>Policy & Society</div>
-
-<div>Technology & AI</div>
-
-<div>Business & Economics</div>
-
-<div>Law & Justice</div>
-
-<div>Current Events</div>
-
-</div>
-
-<section class="featured">
-
-<small>
-
-FEATURED BRIEF
-
-</small>
-
-<h2>
-
-Education Brief
-
-</h2>
-
-<div class="preview">
-
-A concise student perspective examining an important educational issue and its broader impact on student life.
-
-</div>
-
-<a class="read" href="articles/education-001.html">
-
-Read Article
-
-</a>
-
-</section>
+<section>
 
 <div class="section-title">
 
-Latest Articles
+Browse By Topic
 
 </div>
 
-<div class="grid">
+<div class="topic-list">
 
-<div class="article">
+<details open>
 
-<div class="tag">
+<summary>Education</summary>
 
-Education
+<div class="bubble-grid">
 
-</div>
+<a class="bubble"
+href="articles/education-001.html">
 
-<h3>
-
-Education Brief
-
-</h3>
-
-<p>
-
-Short, accessible analysis designed to make educational issues easier to understand.
-
-</p>
-
-<a href="articles/education-001.html">
-
-Read →
-
-</a>
-
-</div>
-
-<div class="article">
-
-<div class="tag">
-
-Policy & Society
-
+<div class="type">
+Opinion Brief
 </div>
 
 <h3>
-
-Abortion Should Be Legal In All States
-
+Schools Should Limit Student Cell Phone Use During Class
 </h3>
 
+<div class="author">
+Anonymous Article Writer
+</div>
+
 <p>
-
-An opinion brief exploring reproductive rights, public policy, and the broader social impacts of abortion access.
-
+Exploring classroom focus, participation, and how phone policies shape student learning.
 </p>
 
-<a href="articles/humanities-001.html">
-
+<div class="read">
 Read Article →
+</div>
 
 </a>
 
 </div>
 
+</details>
+
+
+<details>
+
+<summary>Policy & Society</summary>
+
+<div class="bubble-grid">
+
+<a class="bubble"
+href="articles/policy-001.html">
+
+<div class="type">
+Opinion Brief
 </div>
+
+<h3>
+Abortion Should Be Legal In All States
+</h3>
+
+<div class="author">
+Avika Tase
+</div>
+
+<p>
+Examining reproductive rights, public policy, and broader societal impact.
+</p>
+
+<div class="read">
+Read Article →
+</div>
+
+</a>
+
+<div class="bubble placeholder">
+
+<div class="type">
+Coming Soon
+</div>
+
+<h3>
+Future Policy Brief
+</h3>
+
+<div class="author">
+Contributor To Be Announced
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<details>
+<summary>Technology & AI</summary>
+
+<div class="bubble placeholder">
+
+Articles coming soon
+
+</div>
+
+</details>
+
+
+<details>
+<summary>Business & Economics</summary>
+
+<div class="bubble placeholder">
+
+Articles coming soon
+
+</div>
+
+</details>
+
+
+<details>
+<summary>Law & Justice</summary>
+
+<div class="bubble placeholder">
+
+Articles coming soon
+
+</div>
+
+</details>
+
+
+<details>
+<summary>Current Events</summary>
+
+<div class="bubble placeholder">
+
+Articles coming soon
+
+</div>
+
+</details>
+
+</div>
+
+</section>
+
 
 <section class="submit">
 
 <h2>
 
-Submit A Brief
+Join The Student Brief 360
 
 </h2>
 
 <p>
 
-Have an idea, perspective, or topic you want to explore? Submit your brief and contribute to Student Brief 360.
+Interested in writing, designing, editing, or helping build the website?
+
+We are accepting applications until the end of June.
 
 </p>
 
+<div class="contact">
+
 <a href="https://forms.gle/VzqCk7xn6ahxU7N38" target="_blank">
 
-Open Submission Form
+Application Form
 
 </a>
+
+<a href="mailto:thestudentbrief360@gmail.com">
+
+Email Us
+
+</a>
+
+<a href="https://www.instagram.com/thestudentbrief360/" target="_blank">
+
+Instagram
+
+</a>
+
+</div>
+
+<div class="footer-info">
+
+Email:
+thestudentbrief360@gmail.com
+
+|
+
+Instagram:
+@thestudentbrief360
+
+</div>
 
 </section>
 
 <footer>
 
-Student Voices • Real World Impact
+The Student Brief 360 |
+Student Voices. Real-World Impact.
 
 </footer>
 
@@ -546,3 +564,4 @@ Student Voices • Real World Impact
 </body>
 
 </html>
+```
