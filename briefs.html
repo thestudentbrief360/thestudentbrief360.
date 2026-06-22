@@ -1,1 +1,439 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Briefs | The Student Brief 360</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--classic:#0D3B66;
+--dusty:#7F9DB1;
+--sky:#B4D6E3;
+--bg:#DCE8EE;
+--surface:#EEF6F9;
+--text:#19314B;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:"Balsamiq Sans";
+
+background:var(--bg);
+
+color:var(--text);
+
+}
+
+.container{
+
+max-width:1350px;
+
+margin:auto;
+
+padding:40px;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+padding-bottom:80px;
+
+}
+
+.links{
+
+display:flex;
+
+gap:32px;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+.apply{
+
+background:var(--classic);
+
+color:white;
+
+padding:14px 22px;
+
+border-radius:999px;
+
+}
+
+.hero{
+
+padding-bottom:100px;
+
+}
+
+.hero h1{
+
+font-family:"Playfair Display";
+
+font-size:84px;
+
+margin-bottom:18px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+line-height:2;
+
+}
+
+.feature{
+
+background:var(--surface);
+
+padding:50px;
+
+border-radius:52px;
+
+margin-bottom:90px;
+
+}
+
+.feature small{
+
+letter-spacing:2px;
+
+}
+
+.feature h2{
+
+font-family:"Playfair Display";
+
+font-size:56px;
+
+margin:20px 0;
+
+}
+
+.read{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:16px 24px;
+
+border-radius:999px;
+
+background:var(--classic);
+
+color:white;
+
+}
+
+.filters{
+
+display:flex;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+margin-bottom:60px;
+
+}
+
+.filter{
+
+padding:14px 20px;
+
+background:var(--surface);
+
+border-radius:999px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.article{
+
+background:rgba(255,255,255,.3);
+
+padding:40px;
+
+border-radius:40px;
+
+}
+
+.article h3{
+
+font-family:"Playfair Display";
+
+font-size:40px;
+
+margin-bottom:14px;
+
+}
+
+.article p{
+
+line-height:2;
+
+}
+
+.submit{
+
+margin-top:120px;
+
+padding:80px;
+
+background:var(--classic);
+
+color:white;
+
+border-radius:60px;
+
+text-align:center;
+
+}
+
+.submit h2{
+
+font-family:"Playfair Display";
+
+font-size:60px;
+
+margin-bottom:18px;
+
+}
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div>
+
+Student Brief 360
+
+</div>
+
+<div class="links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="briefs.html">Briefs</a>
+<a href="contributors.html">Contributors</a>
+<a class="apply" href="apply.html">Apply</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+Brief Archive
+
+</h1>
+
+<p>
+
+Explore concise educational briefs written by students across policy, education, careers, technology, and current events.
+
+</p>
+
+</section>
+
+<section class="feature">
+
+<small>
+
+FEATURED BRIEF
+
+</small>
+
+<h2>
+
+Should Internships Be Paid?
+
+</h2>
+
+<p>
+
+An exploration of accessibility, compensation, and opportunity.
+
+</p>
+
+<a class="read" href="#">
+
+Read Brief
+
+</a>
+
+</section>
+
+<div class="filters">
+
+<div class="filter">
+
+Education
+
+</div>
+
+<div class="filter">
+
+Technology
+
+</div>
+
+<div class="filter">
+
+Policy
+
+</div>
+
+<div class="filter">
+
+Current Events
+
+</div>
+
+<div class="filter">
+
+Careers
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="article">
+
+<h3>
+
+Should Internships Be Paid?
+
+</h3>
+
+<p>
+
+Careers • Opportunity
+
+</p>
+
+</div>
+
+<div class="article">
+
+<h3>
+
+Abortion Brief
+
+</h3>
+
+<p>
+
+Policy • Society
+
+</p>
+
+</div>
+
+</div>
+
+<section class="submit">
+
+<h2>
+
+Submit A Brief
+
+</h2>
+
+<p>
+
+Turn your ideas into concise educational content.
+
+</p>
+
+</section>
+
+<footer>
+
+Student Voices • Real World Impact
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
+```
 
