@@ -1,1 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>Apply | The Student Brief 360</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Balsamiq+Sans:wght@400;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+
+--classic:#0D3B66;
+--dusty:#7F9DB1;
+--sky:#B4D6E3;
+
+--bg:#DCE8EE;
+
+--surface:#EDF5F8;
+
+--text:#17334D;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:"Balsamiq Sans";
+
+color:var(--text);
+
+}
+
+.container{
+
+max-width:1250px;
+
+margin:auto;
+
+padding:40px;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding-bottom:90px;
+
+}
+
+.logo{
+
+font-family:"Playfair Display";
+
+font-size:32px;
+
+}
+
+.links{
+
+display:flex;
+
+gap:34px;
+
+}
+
+.active{
+
+background:var(--classic);
+
+color:white;
+
+padding:14px 22px;
+
+border-radius:999px;
+
+}
+
+.hero{
+
+padding-bottom:120px;
+
+}
+
+.hero h1{
+
+font-family:"Playfair Display";
+
+font-size:92px;
+
+line-height:1;
+
+margin-bottom:26px;
+
+}
+
+.hero p{
+
+max-width:760px;
+
+font-size:21px;
+
+line-height:2;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:18px 28px;
+
+border-radius:999px;
+
+font-weight:700;
+
+}
+
+.primary{
+
+background:var(--classic);
+
+color:white;
+
+}
+
+.secondary{
+
+background:white;
+
+}
+
+.section{
+
+margin-bottom:120px;
+
+}
+
+.section-card{
+
+background:rgba(255,255,255,.45);
+
+padding:70px;
+
+border-radius:50px;
+
+}
+
+.section-title{
+
+font-family:"Playfair Display";
+
+font-size:62px;
+
+margin-bottom:30px;
+
+}
+
+.text{
+
+line-height:2.15;
+
+font-size:18px;
+
+max-width:900px;
+
+}
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:24px;
+
+margin-top:60px;
+
+}
+
+.step{
+
+background:white;
+
+padding:40px;
+
+border-radius:34px;
+
+}
+
+.step-number{
+
+font-size:15px;
+
+letter-spacing:2px;
+
+color:var(--dusty);
+
+margin-bottom:18px;
+
+}
+
+.step h3{
+
+font-family:"Playfair Display";
+
+font-size:34px;
+
+margin-bottom:14px;
+
+}
+
+.quote{
+
+margin-top:40px;
+
+padding:40px;
+
+border-left:6px solid var(--classic);
+
+background:white;
+
+border-radius:30px;
+
+font-family:"Playfair Display";
+
+font-size:30px;
+
+line-height:1.6;
+
+}
+
+.join{
+
+margin-top:120px;
+
+padding:90px;
+
+border-radius:60px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--classic),
+#35658F
+);
+
+color:white;
+
+text-align:center;
+
+}
+
+.join h2{
+
+font-family:"Playfair Display";
+
+font-size:58px;
+
+margin-bottom:20px;
+
+}
+
+.join p{
+
+max-width:760px;
+
+margin:auto;
+
+line-height:2;
+
+margin-bottom:32px;
+
+}
+
+.contact{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.contact a{
+
+background:white;
+
+color:var(--classic);
+
+padding:18px 26px;
+
+border-radius:999px;
+
+font-weight:700;
+
+}
+
+.footer{
+
+padding:60px;
+
+text-align:center;
+
+opacity:.8;
+
+}
+
+@media(max-width:900px){
+
+.links{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.timeline{
+
+grid-template-columns:1fr;
+
+}
+
+.section-card{
+
+padding:42px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+
+The Student Brief 360
+
+</div>
+
+<div class="links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="briefs.html">Briefs</a>
+<a href="contributors.html">Contributors</a>
+<a class="active" href="apply.html">Apply</a>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>
+
+Help Build Student Media
+
+</h1>
+
+<p>
+
+Join a growing network of student writers, editors, designers, and contributors working to make educational content more accessible, thoughtful, and student-driven.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+class="btn primary"
+href="https://forms.gle/VzqCk7xn6ahxU7N38"
+target="_blank">
+
+Apply Now
+
+</a>
+
+<a
+class="btn secondary"
+href="mailto:thestudentbrief360@gmail.com">
+
+Questions?
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-card">
+
+<div class="section-title">
+
+Why You Should Apply
+
+</div>
+
+<div class="text">
+
+The Student Brief 360 is more than a publication platform. It is an opportunity to turn curiosity into impact and become part of a student community that values thoughtful ideas, clear communication, and meaningful discussion.
+
+Contributors develop real world skills in writing, research, editing, collaboration, and digital publishing while building a portfolio of published work.
+
+Whether you want to explore topics you care about, strengthen your voice as a writer, or gain experience creating educational media, this platform gives you space to grow.
+
+No prior publishing experience is required. We value initiative, curiosity, and a willingness to learn.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-title">
+
+How You Can Apply
+
+</div>
+
+<div class="timeline">
+
+<div class="step">
+
+<div class="step-number">
+
+STEP 01
+
+</div>
+
+<h3>
+
+Apply
+
+</h3>
+
+Submit the contributor form and tell us about your interests.
+
+</div>
+
+<div class="step">
+
+<div class="step-number">
+
+STEP 02
+
+</div>
+
+<h3>
+
+Connect
+
+</h3>
+
+Receive contributor details and publication guidance.
+
+</div>
+
+<div class="step">
+
+<div class="step-number">
+
+STEP 03
+
+</div>
+
+<h3>
+
+Publish
+
+</h3>
+
+Create educational content and become part of the platform.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="section-card">
+
+<div class="section-title">
+
+The Importance of Speaking Up
+
+</div>
+
+<div class="text">
+
+Students are often expected to absorb information rather than contribute to it.
+
+At The Student Brief 360, we believe student voices deserve to be part of the conversation.
+
+Sharing ideas publicly encourages stronger communication, deeper engagement, and thoughtful discussion surrounding issues that directly affect students.
+
+Publishing creates opportunities to shape conversations rather than simply react to them.
+
+Every brief demonstrates that student voices are capable of creating meaningful impact.
+
+</div>
+
+<div class="quote">
+
+Student voices do not need permission to matter.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="join">
+
+<h2>
+
+Join The Student Brief 360
+
+</h2>
+
+<p>
+
+Interested in writing, designing, editing, or helping build the website? Applications are open through the end of June.
+
+</p>
+
+<div class="contact">
+
+<a
+href="https://forms.gle/VzqCk7xn6ahxU7N38"
+target="_blank">
+
+Application Form
+
+</a>
+
+<a
+href="mailto:thestudentbrief360@gmail.com">
+
+Email Us
+
+</a>
+
+<a
+href="https://www.instagram.com/thestudentbrief360/"
+target="_blank">
+
+Instagram
+
+</a>
+
+</div>
+
+<br><br>
+
+Email:
+thestudentbrief360@gmail.com
+
+|
+
+Instagram:
+@thestudentbrief360
+
+</section>
+
+
+<div class="footer">
+
+The Student Brief 360 |
+Student Voices. Real-World Impact.
+
+</div>
+
+</div>
+
+</body>
+
+</html>
